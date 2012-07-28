@@ -20,23 +20,33 @@ header {
 }
 
 .the_button_area {
-  margin-top: 20px;
+  margin-top: 40px;
 }
-
+.numbers {
+  border: 1px solid purple;
+  float: left;
+  font-size: 14px;
+  height: 35px;
+  padding: 7px;
+  position: relative;
+  width: 136px;
+}
 .the_button {
   background: #A000A0;
-  padding: 5px;
-  height: 30px;
-  width: 100px;
-  font-size: 12px;
-  font-weight: 700;
-  text-shadow: 0px -1px 0px black;
-  line-height: 20px;
-  text-align: center;
   border-radius: 14px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 16px;
+  font-weight: 700;
+  height: 35px;
+  padding: 5px 20px;
+  text-shadow: 0px -1px 0px black;
+  line-height: 22px;
+  text-align: center;
   cursor: pointer;
   display: block;
   position: relative;
+  float: left;
   &:hover {
     opacity: 0.7;
   }
