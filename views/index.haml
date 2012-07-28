@@ -6,6 +6,8 @@
     %link{href: "/stylesheets/screen.css", type:'text/css', media:'screen', rel:'stylesheet'}
     %link{href: "/stylesheets/foundation.css", type:'text/css', media:'screen', rel:'stylesheet'}
     %link{href: "/stylesheets/celly.css", type:'text/css', media:'screen', rel:'stylesheet'}
+    %script{href: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'}
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
     /[if lte IE 8]
       %link{href: "/stylesheets/ie.css", type:'text/css', media:'screen', rel:'stylesheet'}
   %body
@@ -18,7 +20,18 @@
       -# .four.columns
       -#   %h3 Try it out
     .the_button_area.row
-      .twelve.column.offset-by-one
+      .twelve.columns.offset-by-one
         %input.numbers{placeholder: 'xxx-xxx-xxxx'}
         .the_button
           Push to phone
+    .purpleswag.row
+      .centered.columns
+        <iframe width="853" height="480" src="http://www.youtube.com/embed/KuZ2QZKYj7c" frameborder="0" allowfullscreen></iframe>
+:javascript
+  $(function(){
+    $('.the_button').on('click', function(e){
+      $('.purpleswag').fadeIn();
+      e.preventDefault();
+      $('iframe').attr('src',$(this).attr('href'));
+    });
+  });
