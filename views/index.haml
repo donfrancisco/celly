@@ -3,12 +3,22 @@
   %head
     %title Myapp
     %link(rel="stylesheet" href="/stylesheets/screen.css")
-    %link(rel="stylesheet" href="/stylesheets/screen.css")
     %link{href: "/stylesheets/screen.css", type:'text/css', media:'screen', rel:'stylesheet'}
+    %link{href: "/stylesheets/foundation.css", type:'text/css', media:'screen', rel:'stylesheet'}
     %link{href: "/stylesheets/celly.css", type:'text/css', media:'screen', rel:'stylesheet'}
     /[if lte IE 8]
       %link{href: "/stylesheets/ie.css", type:'text/css', media:'screen', rel:'stylesheet'}
   %body
-    %header
+    %header.row
       %h1
         Celly.io
+    .why.row
+      .eight.columns
+        %h3 Simply allow your application or website to be send as a text message.
+      .four.columns
+        %h3 Try it out
+    .the_button_area.row
+      .twelve.column
+        .the_button
+          Push to phone
+        %input{placeholder: 'xxx-xxx-xxxx'}

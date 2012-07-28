@@ -1,6 +1,8 @@
 require 'compass'
 require 'sinatra'
 require 'haml'
+require "zurb-foundation"
+require 'thin'
 
 configure do
     set :haml, {:format => :html5, :escape_html => true}
@@ -10,7 +12,7 @@ end
 
 get '/stylesheets/:name.css' do
     content_type 'text/css', :charset => 'utf-8'
-      scss(:"stylesheets/#{params[:name]}" )
+    scss(:"stylesheets/#{params[:name]}" )
 end
 
 get '/' do
