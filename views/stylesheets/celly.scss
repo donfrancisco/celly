@@ -38,6 +38,8 @@ header {
 }
 
 .the_button {
+  color: white;
+  border: none;
   background: #A000A0;
   border-radius: 14px;
   border-top-left-radius: 0;
@@ -53,6 +55,7 @@ header {
   display: block;
   position: relative;
   float: left;
+  margin-left: 0;
   &:hover {
     opacity: 0.7;
   }

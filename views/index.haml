@@ -20,10 +20,15 @@
       -# .four.columns
       -#   %h3 Try it out
     .the_button_area.row
-      .twelve.columns.offset-by-one
-        %input.numbers{placeholder: 'xxx-xxx-xxxx'}
-        .the_button
-          Push to phone
+
+
+      -# the sms pusher
+      %form.twelve.columns.offset-by-one{action: '/sendSms', name:'sendSms', method:'post'}
+        %input.numbers{value:'3109852847', name:'address', size:'12', maxlength:'16'}
+        %button.the_button{name:'sendSms', type:'submit'}
+          Send SMS Message
+
+
     .purpleswag.row
       .centered.columns
         <iframe width="853" height="480" src="http://www.youtube.com/embed/KuZ2QZKYj7c" frameborder="0" allowfullscreen></iframe>
